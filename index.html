@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <video autoplay muted loop playsinline>
+      <source src="./video2.mp4" type="video/mp4" />
+    </video>
+
     <!--
     =====================================================
     ATTENTION ÉTUDIANTS !
@@ -67,6 +71,16 @@
   -->
     <template id="pokemon-card-template">
       <article class="card card-flex">
+        <!-- Types (badges) -->
+        <div class="card-types card-types-flex" data-field="types-container">
+          <!--
+          Exemple avec 2 badges de type.
+          JavaScript adaptera le nombre selon le Pokémon.
+        -->
+          <span class="type-badge" data-type="type1">Type 1</span>
+          <span class="type-badge" data-type="type2">Type 2</span>
+        </div>
+
         <!-- Image du Pokémon -->
         <div class="card-image-container card-image-flex">
           <img
@@ -80,24 +94,18 @@
         <!-- Informations principales -->
         <div class="card-info card-info-flex">
           <h2 class="card-name" data-field="name">Nom du Pokémon</h2>
-          <p class="card-id">
-            <span class="card-id-label">N°</span>
-            <span class="card-id-value" data-field="id">000</span>
-          </p>
-          <p class="card-generation">
-            <span class="card-generation-label">Génération:</span>
-            <span class="card-generation-value" data-field="generation">1</span>
-          </p>
-        </div>
-
-        <!-- Types (badges) -->
-        <div class="card-types card-types-flex" data-field="types-container">
-          <!--
-          Exemple avec 2 badges de type.
-          JavaScript adaptera le nombre selon le Pokémon.
-        -->
-          <span class="type-badge" data-type="type1">Type 1</span>
-          <span class="type-badge" data-type="type2">Type 2</span>
+          <div class="card-info-flex-2">
+            <p class="card-id">
+              <span class="card-id-label">N°</span>
+              <span class="card-id-value" data-field="id">000</span>
+            </p>
+            <p class="card-generation">
+              <span class="card-generation-label">Génération:</span>
+              <span class="card-generation-value" data-field="generation"
+                >1</span
+              >
+            </p>
+          </div>
         </div>
 
         <!-- Statistiques -->

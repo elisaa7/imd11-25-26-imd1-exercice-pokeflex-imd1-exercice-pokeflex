@@ -1,13 +1,4 @@
 /*
- * =====================================================
- * 🦊 PokéCSS - Feuille de styles
- * =====================================================
- *
- * C'EST ICI QUE TU TRAVAILLES !
- *
- * Objectif : Utilise CSS Flexbox pour mettre en page
- * l'application Pokémon.
- *
  * Conseils :
  * - Cherche les classes qui contiennent "-flex" dans leur nom
  *   Ce sont des conteneurs qui pourraient utiliser display: flex
@@ -29,3 +20,172 @@
  * Bon courage ! 🎨
  * =====================================================
  */
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+@keyframes magicMove {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(200px, 200px);
+  }
+}
+.search-flex {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.header-title {
+  display: flex;
+  justify-content: center;
+  font-weight: 750;
+  font-size: 60px;
+  margin-bottom: 50px;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 15px #00e5ff,
+    0 0 25px #767676;
+  animation: electric 1.5s infinite alternate;
+}
+
+@keyframes electric {
+  0% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 15px #6ed8ff,
+      0 0 25px #5d656f;
+  }
+  100% {
+    text-shadow:
+      0 0 10px #fff,
+      0 0 25px #fbffe2,
+      0 0 40px #91f8ff;
+  }
+}
+.cards-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.card-name {
+  margin: 10px;
+}
+.card-flex {
+  display: flex;
+  padding: 20px 20px;
+  padding-bottom: 60px;
+  border-radius: 15px;
+  background: #ffffff;
+  flex-direction: column;
+  width: 313px;
+  height: 447px;
+  gap: 10px;
+  border: 3px solid #95a1b7;
+}
+.card-image {
+  display: flex;
+  width: 150px;
+  height: auto;
+  margin: auto;
+  background: linear-gradient(135deg, #697ea0, #c7def2, #cefeff);
+  border-radius: 20px;
+  padding: 5px 70px;
+  border-bottom: 2px solid #535a6d;
+}
+.search-form-flex {
+  padding: 5px 30px;
+  width: 300px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.746);
+}
+.search-button {
+  font-size: smaller;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  width: 80px;
+  height: 40px;
+}
+.card-types-flex {
+  align-self: self-end;
+  justify-content: flex-end;
+  background-color: #000000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+.search-helper {
+  color: lch(0% 0 0);
+  font-weight: 300;
+}
+.search-label {
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 300;
+}
+.card-info-flex-2 {
+  display: flex;
+  justify-content: end;
+  justify-content: space-between;
+  background: linear-gradient(1deg, #999a99, #e8e8e8, #979ea9);
+  padding: 0px 20px;
+  border-radius: 20px;
+  height: 30px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.stat-row-flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0px;
+  font-weight: 350;
+}
+.card-stats-flex {
+  background: linear-gradient(135deg, #c1daff, #d6ecd2);
+  border-radius: 10px;
+  padding: 10px;
+  border-bottom: 2px solid #53626d;
+}
+.card-flex {
+  position: relative;
+  overflow: hidden;
+}
+.search-input {
+  width: 180px;
+  height: 35px;
+  border-radius: 10px;
+  border-style: dotted;
+  border-color: #78ab7d;
+  padding-left: 10px;
+  font-size: small;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-150px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px) scale(0.8);
+    opacity: 0;
+  }
+}
